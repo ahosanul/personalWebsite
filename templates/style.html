@@ -1,0 +1,15 @@
+{%extends "base.html"%}
+
+{%block style%}
+<style>
+#font1{
+font-size: 100px;
+}
+</style>
+
+<script>
+    $(document).ready(function(){ 
+        $("#myTab li:eq(0) a").tab('show'); // show 2nd tab on page load
+    });
+    </script>
+{%endblock%}

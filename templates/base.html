@@ -1,12 +1,11 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Arup</title>
+  <title>Arup |{{title}} </title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
@@ -24,9 +23,13 @@
   <link href="{% static 'vendor/venobox/venobox.css'%}" rel="stylesheet">
   <link href="{% static 'vendor/owl.carousel/assets/owl.carousel.min.css'%}" rel="stylesheet">
 
+    <!-- my css  -->
+    <link href="{% static 'css/my.css'%}" rel="stylesheet">
+  
   <!-- Template Main CSS File -->
   <link href="{% static 'css/style.css'%}" rel="stylesheet">
   
+
 
   <!-- moving photo-->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
@@ -38,6 +41,10 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  {%block style%}
+
+  {%endblock%}
+
 </head>
 
 <body>
@@ -47,20 +54,20 @@
     <div class="container d-flex align-items-center" >
 
       <div class="logo mr-auto">
-        <h1><a href="index.html" style="color: white; font-size: 30px ;font:normal normal normal 22px/1.4em raleway,sans-serif; ">
+        <h1><a href="index" style="color: white; font-size: 30px ;font:normal normal normal 22px/1.4em raleway,sans-serif; ">
            <span style="letter-spacing:0.06em;">Imteaz</span>
           <span style="letter-spacing:0.03em;">&nbsp;</span>
 
-          <span style="color:#7DCADA;letter-spacing:0.06em;font-size:22px;">Rahman</span></a></h1>
+          <span style="color:#7DCADA;letter-spacing:0.06em;font-size:22px;">Rahaman</span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="index">Home</a></li>
           <li><a href="research.html">Research</a></li> 
-          <li><a href="publications.html">Publications</a></li>
+          <li><a href="publications">Publications</a></li>
           <li><a href="Teaching.html">Teaching</a></li>
           <li><a href="Presentation.html">Presentation & Awards</a></li>
           <li><a href="Contact.html">Contact</a></li>
@@ -69,7 +76,28 @@
       </nav><!-- .nav-menu -->
     </div>
   </header><!-- End Header -->
-  
+
+
+
+
+ 
+
+  <main id="main">
+
+    <!-- ======= What We Do Section ======= -->
+    <section id="what-we-do" class="what-we-do">
+      <div class="container" style="margin-top: 60px;">
+
+        <div class="section-title">
+          <h2> {% block pagetitle %}  {% endblock %}</h2>
+        </div>
+        {% block pagedata %}
+       
+
+        {%endblock%}
+        </div>
+
+  </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -79,18 +107,16 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Lumia</h3>
+            <h3 style="color :#ffff;">Imteaz Rahaman</h3>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              Holding No. 188, Kanchanpur, <br> jhenidah sadar,<br>Khulna,Bangladesh<br>
+              <strong>Phone:</strong>  (+88) 01632-988128<br>
+              <strong>Email:</strong> imteaz.ruet.eee@gmail.com<br>
             </p>
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+            <h4 style="color :#ffff;">Useful Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
@@ -101,7 +127,7 @@
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
+            <h4 style="color :#ffff;">Our Services</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
@@ -112,7 +138,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
+            <h4 style="color :#ffff;">Join Our Newsletter</h4>
             <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
