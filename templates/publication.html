@@ -21,49 +21,22 @@
         <div class="tab-pane fade" id="profile">
             <!-- start of Journals list  -->
 
-            <div class="row">
+
+            {%for pape in paper%}
+            <div class="row" style="text-align: center;">
                 <div class="col-lg-1"  >
-                    <kbd>1</kbd>
+                    <kbd>{{forloop.counter}}</kbd>
                 </div>
-                <div class="col-lg-10">
-                    <p> <strong>I. Rahaman</strong>, M. F. Reza, M. S. Hossain, P. K. Sarkar “Performance Analysis of Linearly Arranged Concentric Circular Antenna Array with
-                        Low Sidelobe Level and Beam-width Using Robust Tapering Techniques”, 2020. (Got a minor review from “IEEE Access”, and about
-                        to accept soon)
+                <div class="col-lg-10" style="text-align: justify;">
+                    <p> {{pape.title}}
                     </p>
                 </div>
                 <div class="col-lg-1">
-                    <a href="">click</a>
+                    <a href={{pape.link}}>click</a>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-lg-1">
-                    <kbd>1</kbd>
-                </div>
-                <div class="col-lg-10">
-                    <p>I. Rahaman, M. F. Reza, M. S. Hossain, P. K. Sarkar “Performance Analysis of Linearly Arranged Concentric Circular Antenna Array with
-                        Low Sidelobe Level and Beam-width Using Robust Tapering Techniques”, 2020. (Got a minor review from “IEEE Access”, and about
-                        to accept soon)
-                    </p>
-                </div>
-                <div class="col-lg-1">
-                    <a href="">click</a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-1">
-                    <kbd>1</kbd>
-                </div>
-                <div class="col-lg-10">
-                    <p>I. Rahaman, M. F. Reza, M. S. Hossain, P. K. Sarkar “Performance Analysis of Linearly Arranged Concentric Circular Antenna Array with
-                        Low Sidelobe Level and Beam-width Using Robust Tapering Techniques”, 2020. (Got a minor review from “IEEE Access”, and about
-                        to accept soon)
-                    </p>
-                </div>
-                <div class="col-lg-1">
-                    <a href="">click</a>
-                </div>
-            </div>
+          {%endfor%}
            
             <!-- end of of Journals list  -->
             
@@ -76,49 +49,18 @@
 
              <!-- start of confarence list  -->
 
-             <div class="row">
-                <div class="col-lg-1"  >
-                    <kbd>1</kbd>
-                </div>
-                <div class="col-lg-10">
-                    <p> <strong>I. Rahaman</strong>M. S. Hossain, M. F. Reza and P. K. Sarkar, ”Linearly-arranged Concentric Circular Antenna Array Beamformer Using Ta-
-                        pering Technique,” 2019 5th International Conference on Advances in Electrical Engineering (ICAEE), pp. 648-652, Dhaka,Bangladesh
-                    </p>
-                </div>
-                <div class="col-lg-1">
-                    <a href="">click</a>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-1">
-                    <kbd>2</kbd>
-                </div>
-                <div class="col-lg-10">
-                    <p>I. Rahaman, M. F. Reza, M. S. Hossain, P. K. Sarkar “Performance Analysis of Linearly Arranged Concentric Circular Antenna Array with
-                        Low Sidelobe Level and Beam-width Using Robust Tapering Techniques”, 2020. (Got a minor review from “IEEE Access”, and about
-                        to accept soon)
-                    </p>
-                </div>
-                <div class="col-lg-1">
-                    <a href="">click</a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-1">
-                    <kbd>1</kbd>
-                </div>
-                <div class="col-lg-10">
-                    <p>I. Rahaman, M. F. Reza, M. S. Hossain, P. K. Sarkar “Performance Analysis of Linearly Arranged Concentric Circular Antenna Array with
-                        Low Sidelobe Level and Beam-width Using Robust Tapering Techniques”, 2020. (Got a minor review from “IEEE Access”, and about
-                        to accept soon)
-                    </p>
-                </div>
-                <div class="col-lg-1">
-                    <a href="">click</a>
-                </div>
-            </div>
-           
+             {%for pape in confarence%}
+             <div class="row" style="text-align: center;">
+                 <div class="col-lg-1"  >
+                     <kbd>{{forloop.counter}}</kbd>
+                 </div>
+                 <div class="col-lg-10" style="text-align: justify;">
+                     <p> {{pape.title}}
+                     </p>
+                 </div>
+             </div>
+ 
+           {%endfor%}
             <!-- end of of confarence list  -->
             
 
